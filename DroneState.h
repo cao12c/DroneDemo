@@ -21,6 +21,9 @@ class DroneState
         double yaw_;
     };
     double timestamp_;
+    Position position_;
+    Velocity velocity_;
+    Attitude attitude_;
 
   public:
     void update(double dt);
