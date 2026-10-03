@@ -28,4 +28,7 @@ class DroneState
   public:
     void update(double dt);
     void print();
+    void setPosition(double x, double y, double z);
+    void setVelocity(double x, double y, double z);
+    void setAttitude(double roll, double pitch, double yaw);
 };
