@@ -26,6 +26,11 @@ class DroneState
     Attitude attitude_;
 
   public:
+    DroneState()
+        : timestamp_(0.0), position_ {0.0, 0.0, 0.0}, velocity_ {0.0, 0.0, 0.0},
+          attitude_ {0.0, 0.0, 0.0}
+    {
+    }
     void update(double dt);
     void print();
     void setPosition(double x, double y, double z);

@@ -1,4 +1,5 @@
 #include "DroneState.h"
+#include <iostream>
 
 void DroneState::update(double dt)
 {
