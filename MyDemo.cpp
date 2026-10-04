@@ -15,7 +15,7 @@ int main()
         {
             noDataCount++;
             saveState(droneState, "drone_state.csv");
-            droneState.print();
+            noDataCount = 0;
         }
         else
         {
