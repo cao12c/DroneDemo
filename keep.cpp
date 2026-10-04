@@ -27,16 +27,10 @@ void saveState(const DroneState& state, const char* filename)
 }
 void initSave(const char* filename)
 {
-    std::ofstream file(filename);
+    std::ofstream file(filename, std::ios::app);
     if (file.is_open())
     {
         file << "timestamp,x,y,z,vx,vy,vz,roll,pitch,yaw" << std::endl;
-        for (int i = 0;i < 5;i++)
-        {
-            file
-                << "default,default,default,default,default,default,default,default,default,default"
-                << std::endl;
-        }
         file.close();
     }
     else
