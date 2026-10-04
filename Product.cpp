@@ -8,5 +8,6 @@ void StateChange(DroneState& state)
     for (int i = 0; i <5; ++i)
     {
         state.update(0.1);
+        state.print();
     }
 }

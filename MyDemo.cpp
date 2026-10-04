@@ -5,5 +5,4 @@ int main()
 {
     DroneState droneState;
     StateChange(droneState);
-    droneState.print();
 }
