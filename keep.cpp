@@ -25,7 +25,7 @@ void saveState(const DroneState& state, const char* filename)
         std::cerr << "Failed to open file: " << filename << std::endl;
     }
 }
-void initSave(std::string filename)
+void initSave(const char* filename)
 {
     std::ofstream file(filename);
     if (file.is_open())
