@@ -5,6 +5,7 @@
 int main()
 {
     DroneState droneState;
+    initSave("drone_state.csv");
     for (int i = 0; i < 5; ++i)
     {
         StateChange(droneState);

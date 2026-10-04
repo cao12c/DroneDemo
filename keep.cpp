@@ -25,3 +25,22 @@ void saveState(const DroneState& state, const char* filename)
         std::cerr << "Failed to open file: " << filename << std::endl;
     }
 }
+void initSave(std::string filename)
+{
+    std::ofstream file(filename);
+    if (file.is_open())
+    {
+        file << "x,y,z,vx,vy,vz,roll,pitch,yaw,timestamp" << std::endl;
+        for (int i = 0;i < 5;i++)
+        {
+            file
+                << "default,default,default,default,default,default,default,default,default,default"
+                << std::endl;
+        }
+        file.close();
+    }
+    else
+    {
+        std::cerr << "Failed to open file: " << filename << std::endl;
+    }
+}
