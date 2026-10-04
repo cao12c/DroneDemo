@@ -4,5 +4,8 @@
 int main()
 {
     DroneState droneState;
-    StateChange(droneState);
+    for (int i = 0; i < 5; ++i)
+    {
+        StateChange(droneState);
+    }
 }
