@@ -36,7 +36,7 @@ class DroneState
     void setPosition(double x, double y, double z);
     void setVelocity(double x, double y, double z);
     void setAttitude(double roll, double pitch, double yaw);
-    void getPostion(double& x, double& y, double& z) const;
+    void getPosition(double& x, double& y, double& z) const;
     void getVelocity(double& vx, double& vy, double& vz) const;
     void getAttitude(double& roll, double& pitch, double& yaw) const;   
     void getTimestamp(double& timestamp) const;
