@@ -6,10 +6,21 @@ int main()
 {
     DroneState droneState;
     initSave("drone_state.csv");
-    for (int i = 0; i < 5; ++i)
+    static int frameCount = 0;
+    static int Count = 0;
+    for (int i = 0; i < 12; ++i)
     {
-        StateChange(droneState);
+        bool answer = StateChange(droneState);
+        if (answer == false)
+        {
+            frameCount++;
+        }
+        if (frameCount == 3)
+        {
+            std::cout << "warning" << std::endl;
+        }
         saveState(droneState, "drone_state.csv");
         droneState.print();
+        Count++;
     }
 }
