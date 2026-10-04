@@ -140,11 +140,13 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CommunicationMonitor.h" />
     <ClInclude Include="DroneState.h" />
     <ClInclude Include="Product.h" />
     <ClInclude Include="keep.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CommunicationMonitor.cpp" />
     <ClCompile Include="DroneState.cpp" />
     <ClCompile Include="keep.cpp" />
     <ClCompile Include="MyDemo.cpp" />

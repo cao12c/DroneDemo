@@ -1,9 +1,27 @@
 #include "DroneState.h"
 #include "Product.h"
+#include <time.h>
+#include <ctime>
 
-void StateChange(DroneState& state)
+bool StateChange(DroneState& state)
 {
-    state.setVelocity(1.0, 2.0, 3.0);
-    state.setAttitude(0.1, 0.2, 0.3);
-    state.update(0.1);
+    int i = 0;
+    for (i = 0; i < 10; ++i)
+    {
+        if (i < 6)
+        {
+            state.setPosition(1.0, 2.0, 3.0);
+            state.setVelocity(0.1, 0.2, 0.3);
+            state.setAttitude(0.01, 0.02, 0.03);
+            state.update(0.1);          
+            timestamp.sleep(1); 
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+    }
+    
 }

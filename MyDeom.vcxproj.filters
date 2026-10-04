@@ -27,6 +27,9 @@
     <ClCompile Include="keep.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="CommunicationMonitor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DroneState.h">
@@ -36,6 +39,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="keep.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CommunicationMonitor.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
