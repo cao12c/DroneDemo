@@ -13,10 +13,11 @@ int main()
         bool received = StateChange(droneState);
         if (received)
         {
-            noDataCount++;
-            saveState(droneState, "drone_state.csv");
             noDataCount = 0;
+            saveState(droneState, "drone_state.csv");
+            droneState.print();
         }
+        
         else
         {
             noDataCount++;
