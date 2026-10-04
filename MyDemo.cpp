@@ -1,26 +1,29 @@
 ﻿#include "DroneState.h"
 #include "Product.h"
 #include "keep.h"
+#include <iostream>
 
 int main()
 {
     DroneState droneState;
     initSave("drone_state.csv");
-    static int frameCount = 0;
-    static int Count = 0;
-    for (int i = 0; i < 12; ++i)
+    int noDataCount = 0;
+    for (int i = 0; i < 20; ++i)
     {
-        bool answer = StateChange(droneState);
-        if (answer == false)
+        bool received = StateChange(droneState);
+        if (received)
         {
-            frameCount++;
+            noDataCount++;
+            saveState(droneState, "drone_state.csv");
+            droneState.print();
         }
-        if (frameCount == 3)
+        else
         {
-            std::cout << "warning" << std::endl;
+            noDataCount++;
         }
-        saveState(droneState, "drone_state.csv");
-        droneState.print();
-        Count++;
+        if (noDataCount >= 3)
+        {
+            std::cout << "Warning: communication timeout\n";
+        }
     }
 }
