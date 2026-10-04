@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="MyDeom.vcxproj" />
+  <Project Path="MyDeom.vcxproj" Id="e33f459c-38aa-4076-be29-652f340c69bb" />
 </Solution>
