@@ -3,9 +3,22 @@
 #include <fstream>
 #include <iostream>
 
-void saveState(const DroneState& state, const char* filename)
+void initSave(const char* filename)
 {
     std::ofstream file(filename);
+    if (file.is_open())
+    {
+        file << "timestamp,x,y,z,vx,vy,vz,roll,pitch,yaw" << std::endl;
+        file.close();
+    }
+    else
+    {
+        std::cerr << "Failed to open file: " << filename << std::endl;
+    }
+}
+void saveState(const DroneState& state, const char* filename)
+{
+    std::ofstream file(filename, std::ios::app);
     if (file.is_open())
     {
         double x, y, z;
@@ -25,16 +38,4 @@ void saveState(const DroneState& state, const char* filename)
         std::cerr << "Failed to open file: " << filename << std::endl;
     }
 }
-void initSave(const char* filename)
-{
-    std::ofstream file(filename, std::ios::app);
-    if (file.is_open())
-    {
-        file << "timestamp,x,y,z,vx,vy,vz,roll,pitch,yaw" << std::endl;
-        file.close();
-    }
-    else
-    {
-        std::cerr << "Failed to open file: " << filename << std::endl;
-    }
-}
+
