@@ -1,4 +1,4 @@
 #pragma once
 #include "DroneState.h"
 
-void StateChange();
+void StateChange(DroneState& state);

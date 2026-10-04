@@ -3,7 +3,6 @@
 
 int main()
 {
-    StateChange();
-    DroneState drone;
-    drone.print();
+    DroneState droneState;
+    StateChange(droneState);
 }
