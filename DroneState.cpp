@@ -37,7 +37,7 @@ void DroneState::setAttitude(double roll, double pitch, double yaw)
     attitude_.pitch_ = pitch;
     attitude_.yaw_ = yaw;
 }
-void DroneState::getPostion(double& x, double& y, double& z) const
+void DroneState::getPosition(double& x, double& y, double& z) const
 {
     x = position_.x_;
     y = position_.y_;
