@@ -37,3 +37,25 @@ void DroneState::setAttitude(double roll, double pitch, double yaw)
     attitude_.pitch_ = pitch;
     attitude_.yaw_ = yaw;
 }
+void DroneState::getPostion(double& x, double& y, double& z) const
+{
+    x = position_.x_;
+    y = position_.y_;
+    z = position_.z_;
+}
+void DroneState::getVelocity(double& vx, double& vy, double& vz) const
+{
+    vx = velocity_.vx_;
+    vy = velocity_.vy_;
+    vz = velocity_.vz_;
+}
+void DroneState::getAttitude(double& roll, double& pitch, double& yaw) const
+{
+    roll = attitude_.roll_;
+    pitch = attitude_.pitch_;
+    yaw = attitude_.yaw_;
+}
+void DroneState::getTimestamp(double& timestamp) const
+{
+    timestamp = timestamp_;
+}
